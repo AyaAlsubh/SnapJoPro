@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفعيل الحساب والدفع للأدمن - SnapJo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --accent: #ff8c32; --bg: #f1f2f6; }
+        body { font-family: 'Cairo', sans-serif; background: var(--bg); padding: 40px 20px; margin: 0; display: flex; flex-direction: column; align-items: center; }
+        
+        .checkout-container { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.05); max-width: 750px; width: 100%; text-align: center; }
+        .step-banner { background: #fff5ed; color: var(--accent); padding: 10px 20px; border-radius: 30px; display: inline-block; font-weight: 700; margin-bottom: 20px; font-size: 0.9rem; }
+        h2 { margin: 0; color: #222; }
+        p { color: #666; margin: 10px 0 30px 0; font-size: 1rem; }
+        
+        /* Pricing Cards layout */
+        .pricing-grid { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 35px; }
+        .price-card { background: white; border: 2px solid #eee; border-radius: 12px; padding: 25px; width: 200px; text-align: center; cursor: pointer; transition: 0.3s; position: relative; }
+        .price-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+        .price-card.selected { border-color: var(--accent); background: #fff9f5; box-shadow: 0 5px 15px rgba(255, 140, 50, 0.1); }
+        
+        .price-card h3 { margin: 0 0 10px 0; color: #333; font-size: 1.2rem; }
+        .price-card .amount { font-size: 1.8rem; font-weight: 700; color: var(--accent); margin-bottom: 5px; }
+        .price-card .days { font-size: 0.85rem; color: #777; }
+        
+        /* Radio check indicator */
+        .select-dot { width: 18px; height: 18px; border: 2px solid #ccc; border-radius: 50%; margin: 15px auto 0 auto; display: flex; align-items: center; justify-content: center; }
+        .price-card.selected .select-dot { border-color: var(--accent); background: var(--accent); }
+        
+        .btn-confirm { background: #28a745; color: white; border: none; padding: 15px 40px; border-radius: 8px; font-size: 1.1rem; font-weight: 700; cursor: pointer; font-family: 'Cairo', sans-serif; transition: 0.3s; width: 100%; max-width: 400px; }
+        .btn-confirm:hover { background: #218838; }
+    </style>
+</head>
+<body>
+
+    <div class="checkout-container">
+        <div class="step-banner">الخطوة 2 من 2: تفعيل الحساب المهني</div>
+        <h2>خطوة واحدة وتجعل حسابك نشطاً! ✨</h2>
+        <p>اختر باقة الاشتراك المناسبة لك لتتمكن من رفع معرض أعمالك (البورتفوليو) واستقبال الحجوزات من الزبائن مباشرة.</p>
+        
+        <div class="pricing-grid">
+            
+            <div class="price-card selected" onclick="selectPackage(this, 'Basic', 10)">
+                <h3>الأساسية (Basic)</h3>
+                <div class="amount">10 JOD</div>
+                <div class="days">صلاحية عرض 14 يوم</div>
+                <div class="select-dot"></div>
+            </div>
+
+            <div class="price-card" onclick="selectPackage(this, 'Pro', 25)">
+                <h3>المحترفة (Pro)</h3>
+                <div class="amount">25 JOD</div>
+                <div class="days">صلاحية عرض 30 يوم</div>
+                <div class="select-dot"></div>
+            </div>
+
+            <div class="price-card" onclick="selectPackage(this, 'Premium', 35)">
+                <h3>المتقدمة (Premium)</h3>
+                <div class="amount">35 JOD</div>
+                <div class="days">صلاحية عرض 40 يوم</div>
+                <div class="select-dot"></div>
+            </div>
+
+        </div>
+
+        <div style="border-top: 1px solid #eee; padding-top: 30px;">
+            <p style="font-weight: 600; margin-bottom: 15px; color:#444;">سيتم تحويل قيمة الاشتراك لمدير النظام (Admin) لتفعيل الحساب فوراً</p>
+            <button class="btn-confirm" onclick="completePayment()">تأكيد الدفع والاشتراك والذهاب للوحة التحكم ←</button>
+        </div>
+    </div>
+
+    <script>
+        let chosenPackage = "Basic";
+        let chosenAmount = 10;
+
+        function selectPackage(cardElement, packageType, amount) {
+            // إزالة التحديد عن كل الكروت
+            document.querySelectorAll('.price-card').forEach(card => card.classList.remove('selected'));
+            // تفعيل الكرت المضغوط
+            cardElement.classList.add('selected');
+            
+            chosenPackage = packageType;
+            chosenAmount = amount;
+        }
+
+        function completePayment() {
+            alert(`💳 رائع! تم دفع ${chosenAmount} JOD للأدمن بنجاح.\nتم تفعيل حسابك بنظام باقة (${chosenPackage})، يمكنك الآن استخدام لوحة التحكم بالكامل!`);
+            // الانتقال للداشبورد فوراً بعد نجاح العملية
+            window.location.href = 'photographer_dashboard.html';
+        }
+    </script>
+</body>
+</html>

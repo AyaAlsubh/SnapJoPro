@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب مصور جديد - SnapJo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --accent: #ff8c32; --bg: #f1f2f6; }
+        body { font-family: 'Cairo', sans-serif; background: var(--bg); display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .register-card { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.05); width: 100%; max-width: 450px; text-align: center; }
+        .logo { font-size: 28px; font-weight: 700; color: var(--accent); margin-bottom: 10px; }
+        h2 { margin: 0 0 20px 0; color: #333; font-size: 1.5rem; }
+        .input-group { margin-bottom: 20px; text-align: right; }
+        .input-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #555; }
+        .input-group input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; outline: none; font-family: 'Cairo', sans-serif; }
+        .input-group input:focus { border-color: var(--accent); }
+        .btn-register { background: var(--accent); color: white; border: none; padding: 14px; width: 100%; border-radius: 8px; cursor: pointer; font-weight: 700; font-size: 1.1rem; font-family: 'Cairo', sans-serif; transition: 0.3s; }
+        .btn-register:hover { background: #e07b23; }
+    </style>
+</head>
+<body>
+
+    <div class="register-card">
+        <div class="logo">SnapJo Pro 📷</div>
+        <h2>إنشاء حساب مصور جديد</h2>
+        
+        <form onsubmit="event.preventDefault(); window.location.href='checkout.html';">
+            <div class="input-group">
+                <label>الاسم كاملاً</label>
+                <input type="text" placeholder="مثال: خالد عبيدات" required>
+            </div>
+            <div class="input-group">
+                <label>البريد الإلكتروني</label>
+                <input type="email" placeholder="name@example.com" required>
+            </div>
+            <div class="input-group">
+                <label>كلمة المرور</label>
+                <input type="password" placeholder="••••••••" required>
+            </div>
+            
+            <button type="submit" class="btn-register">استمرار لخطوة الاشتراك والدفع ←</button>
+        </form>
+    </div>
+
+</body>
+</html>

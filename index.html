@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapJo - حجز مصورين</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+<header>
+    <nav>
+        <div class="logo"><a href="#" style="color: black;">Snap<span>io</span></a> </div>
+        <ul>
+            <!-- ربط الروابط بالـ IDs -->
+             <li><a href="about-us.html">من نحن</a></li>
+            <li><a href="#how-it-works">كيف يعمل</a></li>
+            <li><a href="#best-photographers">أفضل المصورين</a></li>
+            <li><a href="contact-us.html">تواصل معنا</a></li>
+        </ul>
+        <div class="auth-buttons">
+           <a href="customer-login.html" class="login" style="color: black;">تسجيل الدخول</a>
+           <a href="photographer-register.html" class="btn-orange">انضم كمصور</a>
+        </div>
+    </nav>
+</header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>احجز مصورك المثالي لأجمل لحظاتك</h1>
+            <p>اختر مصورك المثالي من نخبة المصورين في الأردن ووثق ذكرياتك بأفضل جودة</p>
+            <div class="search-bar">
+              <input type="text" placeholder="ابحث عن مصور أو نوع التصوير...">
+             <button class="btn-orange-large">ابدأ بالبحث الآن</button>
+             <a href="search.html" class="btn-orange-large">ابدأ بالبحث الآن</a>
+           </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section id="how-it-works" class="how-it-works">
+        <h2>كيف <span>يعمل؟</span></h2>
+        <p>ثلاث خطوات بسيطة لحجز مصورك المثالي</p>
+        <div class="steps">
+            <div class="step">
+                <div class="icon">🔍</div>
+                <h3>ابحث وقارن</h3>
+                <p>تصفح المصورين، وشاهد أعمالهم السابقة وقارن الأسعار بسهولة</p>
+            </div>
+            <div class="step">
+                <div class="icon">📅</div>
+                <h3>احجز موعدك</h3>
+                <p>اختر التاريخ المناسب واحجز المصور مباشرة عبر المنصة</p>
+            </div>
+            <div class="step">
+                <div class="icon">📸</div>
+                <h3>استمتع بالنتيجة</h3>
+                <p>احصل على صور احترافية تحفظ لحظاتك المميزة للأبد</p>
+            </div>
+        </div>
+    </section>
+
+<div class="photo-grid-section" style="padding: 60px 20px; text-align: center; background: #fff; direction: rtl;">
+    <h2 style="font-weight: bold; color: #333; margin-bottom: 10px;">إبداعات <span style="color: #f18732;">مصورينا</span></h2>
+    <p style="color: #777; margin-bottom: 30px;">لمحات من معرض أعمال المصورين على المنصة</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; max-width: 1200px; margin: 0 auto;">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=400&q=80" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" />
+        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=400&q=80" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" />
+        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=400&q=80" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" />
+        <img src="https://images.unsplash.com/photo-1520854221256-17451cc35953?auto=format&fit=crop&w=400&q=80" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" />
+    </div>
+</div>
+    <!-- Best Photographers Slider -->
+<section id="best-photographers" class="best-photographers">
+    <h2>أفضل <span>المصورين</span></h2>
+    
+    <div class="slider-wrapper"> <!-- حاوية جديدة للتحكم بالأسهم والمحتوى -->
+        <!-- الأسهم الآن داخل الـ wrapper ومفصولة عن الكروت -->
+        <button class="prev slider-arrow">❮</button>
+        
+        <div class="cards-container">
+            <div class="card">
+                <!-- محتوى كارت Eman Samer... -->
+                <img src="assets/sara.jpg" alt="Eman Samer">
+                <h3>Sara Samer</h3>
+                <p class="rating">⭐ 4.5</p>
+                <p class="location">📍 Irbid, Jordan</p>
+                <a href="sara-profile.html" class="btn-detail">التفاصيل</a>
+            </div>
+            
+            <div class="card">
+                <!-- محتوى كارت Ali Mahmoud... -->
+                <img src="assets/ali.jpg" alt="Ali Mahmoud" >
+                <h3>Ali Mahmoud</h3>
+                <p class="rating">⭐ 4.8</p>
+                <p class="location">📍 Amman, Jordan</p>
+               <a href="khalid-profile.html" class="btn-detail">التفاصيل</a>
+            </div>
+            
+            <div class="card">
+                <!-- محتوى كارت Ahmad Ali... -->
+                <img src="assets/ahmad.jpg" alt="Ahmad Ali">
+                <h3>Ahmad Ali</h3>
+                <p class="rating">⭐ 5</p>
+                <p class="location">📍 Irbid, Jordan</p>
+                <a href="ahmed-profile.html" class="btn-detail">التفاصيل</a>
+            </div>
+        </div>
+        
+        <button class="next slider-arrow">❯</button>
+    </div>
+</section>
+<div class="feedback-section" style="padding: 60px 20px; text-align: center; background-color: #fcfbf7; direction: rtl;">
+    <h2 style="font-weight: bold; color: #333; margin-bottom: 10px;">ماذا يقول <span style="color: #f18732;">عملاؤنا؟</span></h2>
+    <p style="color: #777; margin-bottom: 40px;">تقييمات حقيقية من زبائن جربوا خدمات SnapJo</p>
+    
+    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; max-width: 1100px; margin: 0 auto;">
+        <div style="background: white; padding: 25px; border-radius: 10px; width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: right; border-top: 4px solid #f18732;">
+            <div style="color: #f18732; margin-bottom: 10px;">★★★★★</div>
+            <p style="color: #555; font-size: 0.95rem; line-height: 1.6;">"تعامل راقي جداً والالتزام بالوقت كان ممتازاً. الصور طلعت خرافية وتعديل الألوان محترف جداً."</p>
+            <h4 style="font-size: 1rem; font-weight: bold; margin-top: 15px; color: #333;">- عمر الكردي</h4>
+        </div>
+        <div style="background: white; padding: 25px; border-radius: 10px; width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: right; border-top: 4px solid #f18732;">
+            <div style="color: #f18732; margin-bottom: 10px;">★★★★☆</div>
+            <p style="color: #555; font-size: 0.95rem; line-height: 1.6;">"الموقع سهل جداً بالحجز، تواصلت مع المصورة سارة مباشرة واتفقنا على التفاصيل."</p>
+            <h4 style="font-size: 1rem; font-weight: bold; margin-top: 15px; color: #333;">- رانيا التميمي</h4>
+        </div>
+    </div>
+</div>
+
+    <footer style="background-color: black;">
+        <div id="footer" class="footer-content" style="background-color: black;">
+            <div class="contact">
+                <p>تواصل معنا</p>
+                <p>+962 782345897</p>
+                <p>snapjo@gmail.com</p>
+            </div>
+            <div class="footer-logo">Snap<span>io</span> </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
